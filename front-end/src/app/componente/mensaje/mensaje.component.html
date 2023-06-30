@@ -1,0 +1,7 @@
+<div *ngIf="clienteRestService.messages.length">
+  <h2>Mensajes</h2>
+  <button class="clear"
+          (click)="clienteRestService.clear()">Limpiar</button>
+  <div *ngFor='let message of clienteRestService.messages'> {{message}} </div>
+
+</div>

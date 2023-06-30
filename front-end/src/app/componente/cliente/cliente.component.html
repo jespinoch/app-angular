@@ -1,0 +1,23 @@
+
+
+
+
+<div>
+<table>
+<tbody class="clientes">
+  <tr *ngFor="let cliente of clientes" [class.selected]="cliente === selectedCliente"
+  (click)="onSelect(cliente)">
+    <td><span class="badge">{{ cliente.id }}</span></td>
+    <td>{{ cliente.nombre }}</td>
+    <td>{{ cliente.correo }}</td>
+    <td>{{ cliente.telefono }}</td>
+    <td>{{ cliente.direccion }}</td>
+    <td>
+      <button class="btn btn-sm btn-info" >Editar</button>
+      <button class="btn btn-sm btn-danger">Eliminar</button>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
